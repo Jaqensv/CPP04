@@ -1,5 +1,5 @@
 NAME = main
-SOURCES = main.cpp Animal.class.cpp
+SOURCES = main.cpp Animal.class.cpp Dog.class.cpp Cat.class.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 

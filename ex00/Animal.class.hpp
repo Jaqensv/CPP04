@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:30:28 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/04/12 18:36:42 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/04/12 18:48:15 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ class Animal {
     
 public:
     Animal();
-    Animal(Animal const &src);
+    // Animal(Animal const &src);
     ~Animal();
     // virtual void makeSound();
-    std::string getType();
-    Animal &operator=(Animal const &rhs);
+    std::string getType() const;
+    // Animal &operator=(Animal const &rhs);
 protected:
     std::string _type;
 

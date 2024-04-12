@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:23:38 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/04/12 18:36:51 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/04/12 18:44:19 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int main()
     // j->makeSound();
     // meta->makeSound();
 
-return 0;
+    return 0;
 }

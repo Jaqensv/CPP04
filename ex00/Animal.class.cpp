@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:30:25 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/04/12 18:36:35 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/04/12 18:45:13 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ Animal::Animal(Animal const &src) {
 
 // }
 
-std::string Animal::getType() {
+std::string Animal::getType() const {
     return this->_type;
 }
