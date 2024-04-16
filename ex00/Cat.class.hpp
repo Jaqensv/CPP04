@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 19:16:44 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/04/12 18:49:04 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/04/16 03:13:15 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ public:
     Cat();
     Cat(Cat const &src);
     ~Cat();
-    // Cat &operator=(Cat const &rhs);
-protected:
-    virtual void miaou();
-
+    Cat &operator=(Cat const &rhs);
+    void makeSound() const override;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:21:18 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/04/12 18:48:40 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/04/16 03:12:54 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@ class Dog : public Animal {
 
 public:
     Dog();
-    // Dog(Dog const &src);
+    Dog(Dog const &src);
     ~Dog();
-    // Dog &operator=(Dog const &rhs);
-protected:
-    virtual void ouaf();
+    Dog &operator=(Dog const &rhs);
+    void makeSound() const override;
 };
 
 
