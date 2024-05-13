@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.class.hpp                                   :+:      :+:    :+:   */
+/*   AAnimal.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:30:28 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/13 13:50:37 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/13 13:58:34 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,20 @@
 # include <iostream>
 # include "Brain.class.hpp"
 
-class Animal {
+class AAnimal {
     
 public:
-    Animal();
-    Animal(Animal const &src);
-    virtual ~Animal();
+    AAnimal();
+    AAnimal(AAnimal const &src);
+    virtual ~AAnimal();
     virtual void makeSound() const = 0;
     std::string getType() const;
-    Animal &operator=(Animal const &rhs);
+    AAnimal &operator=(AAnimal const &rhs);
 protected:
     std::string _type;
 
 };
+
+
 
 #endif

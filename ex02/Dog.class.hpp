@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:21:18 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/13 13:39:04 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/13 14:11:17 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "Animal.class.hpp"
 
-class Dog : public Animal {
+class Dog : public AAnimal {
 
 public:
     Dog();

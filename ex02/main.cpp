@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:23:38 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/13 13:54:44 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/13 14:09:05 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int main()
 {
     int animals = 10;
-    const Animal* animal_tab[animals];
+    const AAnimal* animal_tab[animals];
     int a = 0;
     int dog = 0;
     int cat = 0;
@@ -41,11 +41,11 @@ int main()
     std::cout << "dog * " << dog << std::endl;
     std::cout << "cat * " << cat << std::endl;
 
-    //const Animal* virtual_animal = new Animal();
+    const AAnimal* virtual_animal = new AAnimal();
     const WrongAnimal* meta = new WrongAnimal();
-    const Animal* j = new Dog();
+    const AAnimal* j = new Dog();
     //const WrongAnimal* i = new WrongCat();
-    const Animal* i = new Cat();
+    const AAnimal* i = new Cat();
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
     i->makeSound(); //will output the cat sound!

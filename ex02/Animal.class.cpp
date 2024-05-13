@@ -1,6 +1,6 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
+/*                                                        :::      ::::::::   *A/
 /*   Animal.class.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
@@ -12,28 +12,28 @@
 
 #include "Animal.class.hpp"
 
-Animal::Animal() {
-    std::cout << "Default Animal constructor called" << std::endl;
+AAnimal::AAnimal() {
+    std::cout << "DAefault Animal constructor called" << std::endl;
 }
 
-Animal::~Animal() {
+AAnimal::~AAnimal() {
     std::cout << "Animal destructor called" << std::endl;
 }
 
-Animal::Animal(Animal const &src) {
+AAnimal::AAnimal(AAnimal const &src) {
     *this = src;
     std::cout << "Copy Animal constructor called" << std::endl;
 }
 
-void Animal::makeSound() const {
+void AAnimal::makeSound() const {
     return ;
 }
 
-std::string Animal::getType() const {
+std::string AAnimal::getType() const {
     return this->_type;
 }
 
-Animal &Animal::operator=(Animal const &rhs) {
+AAnimal &AAnimal::operator=(AAnimal const &rhs) {
     this->_type = rhs._type;
     std::cout << "Copy assigment operator called" << std::endl;
     return *this;
