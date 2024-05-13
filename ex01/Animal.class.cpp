@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:30:25 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/04/16 03:19:58 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/13 12:12:52 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ std::string Animal::getType() const {
 }
 
 Animal &Animal::operator=(Animal const &rhs) {
+    this->_type = rhs._type;
     std::cout << "Copy assigment operator called" << std::endl;
     return *this;
 }

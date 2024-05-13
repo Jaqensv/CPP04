@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 19:16:44 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/04/16 17:09:31 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/13 12:05:40 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ public:
     Cat(Cat const &src);
     ~Cat();
     Cat &operator=(Cat const &rhs);
-    void makeSound() const override;
+    void makeSound() const;
+private:
+    Brain *_brain;
 };
 
 #endif

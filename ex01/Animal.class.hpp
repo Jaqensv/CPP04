@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:30:28 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/04/16 03:12:47 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/13 12:08:13 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 # define ANIMAL_CLASS_HPP
 
 # include <iostream>
+# include "Brain.class.hpp"
 
 class Animal {
     
 public:
     Animal();
     Animal(Animal const &src);
-    ~Animal();
+    virtual ~Animal();
     virtual void makeSound() const;
     std::string getType() const;
     Animal &operator=(Animal const &rhs);

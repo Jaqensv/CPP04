@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 16:21:18 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/04/16 03:12:54 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/13 12:05:36 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ public:
     Dog(Dog const &src);
     ~Dog();
     Dog &operator=(Dog const &rhs);
-    void makeSound() const override;
+    void makeSound() const;
+private:
+    Brain *_brain;
 };
-
 
 #endif
