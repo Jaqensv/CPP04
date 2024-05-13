@@ -18,3 +18,13 @@ Brain &Brain::operator=(Brain const &rhs) {
     return *this;
 }
 
+void Brain::add_idea(std::string idea, unsigned int i)
+{
+    i = 0;
+    this->_ideas[i] = idea;
+
+    while (i < 100) 
+    {
+        
+    }
+}

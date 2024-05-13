@@ -22,7 +22,7 @@ public:
     Cat(Cat const &src);
     ~Cat();
     Cat &operator=(Cat const &rhs);
-    void makeSound() const override;
+    virtual void makeSound() const override;
 };
 
 #endif

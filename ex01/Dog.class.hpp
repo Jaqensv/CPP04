@@ -22,7 +22,9 @@ public:
     Dog(Dog const &src);
     ~Dog();
     Dog &operator=(Dog const &rhs);
-    void makeSound() const override;
+    virtual void makeSound() const override;
+private:
+    Brain *_brain;
 };
 
 
