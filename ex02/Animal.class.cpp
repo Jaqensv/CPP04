@@ -13,7 +13,7 @@
 #include "Animal.class.hpp"
 
 AAnimal::AAnimal() {
-    std::cout << "DAefault Animal constructor called" << std::endl;
+    std::cout << "Default Animal constructor called" << std::endl;
 }
 
 AAnimal::~AAnimal() {

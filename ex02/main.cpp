@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:23:38 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/13 14:09:05 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/13 14:26:16 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int main()
     std::cout << "dog * " << dog << std::endl;
     std::cout << "cat * " << cat << std::endl;
 
-    const AAnimal* virtual_animal = new AAnimal();
+    //const AAnimal* virtual_animal = new AAnimal();
     const WrongAnimal* meta = new WrongAnimal();
     const AAnimal* j = new Dog();
     //const WrongAnimal* i = new WrongCat();
