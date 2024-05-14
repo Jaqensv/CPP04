@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 14:58:15 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/14 13:06:42 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/14 16:12:23 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,17 @@ public:
     virtual void use(ICharacter& target);
 private:
     std::string _materia;
+};
+
+class IMateriaSource {
+
+public:
+    IMateriaSource();
+    IMateriaSource(IMateriaSource const &src);
+    virtual ~IMateriaSource();
+    IMateriaSource &operator=(IMateriaSource const &rhs);
+    virtual void learnMateria(AMateria*) = 0;
+    virtual AMateria* createMateria(std::string const & type) = 0;
 };
 
 #endif

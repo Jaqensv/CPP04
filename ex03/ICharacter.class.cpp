@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:05:22 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/14 14:07:53 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/14 16:31:30 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,7 @@ ICharacter &ICharacter::operator=(ICharacter const &rhs) {
     std::cout << "ICharacter copy assigment operator called" << std::endl;
 }
 
+void ICharacter::use(int idx, ICharacter& target) {
+    
+    
+}
