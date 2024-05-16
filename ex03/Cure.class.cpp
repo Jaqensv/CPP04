@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 14:16:52 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/14 14:50:55 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/16 16:14:27 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Cure &Cure::operator=(Cure const &rhs) {
     std::cout << "Cure copy assigment operator called" << std::endl;
 }
 
-Cure *Cure::clone() const {
-    Cure *cure = new Cure();
+AMateria* Cure::clone() const {
+    AMateria* cure = new Cure();
     return cure;
 }
