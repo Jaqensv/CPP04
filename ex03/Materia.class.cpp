@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 14:59:24 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/16 16:36:21 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/16 17:18:34 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ std::string const &AMateria::getType() const {
 
 void AMateria::use(ICharacter& target) {
 
-    Ice : "* shoots an ice bolt at <name> *"
-    Cure : "* heals <name>’s wounds *"
+    std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+    std::cout << "* heals "<< target.getName() << "’s wounds *" << std::endl;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:05:22 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/16 16:35:01 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/16 17:31:30 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ void Character::unequip(int idx) {
     
 }
 
-void Character::use(int idx, ICharacter& target) {
+void Character::use(int idx, ICharacter& target) 
+{
     if (idx >= 0 && idx <= 4)
         this->_inventory[idx]->use(target);
     return ;
