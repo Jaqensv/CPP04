@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:05:24 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/16 16:31:32 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/17 17:24:54 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,12 @@ public:
     virtual void equip(AMateria* m);
     virtual void unequip(int idx);
     virtual void use(int idx, ICharacter& target);
-    //AMateria* ground[4];
+    
 private:
     std::string _name;
     AMateria* _inventory[4];
+    int _inv_counter;
+    AMateria** _ground;
 };
-
-
-
 
 #endif

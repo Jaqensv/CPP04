@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 14:59:24 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/16 17:18:34 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/17 17:28:16 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ AMateria &AMateria::operator=(AMateria const &rhs) {
 }
 
 AMateria::AMateria(std::string const & type) {
-    
+    this->_materiaType = type;
+    return ;
 }
 
 std::string const &AMateria::getType() const {
@@ -48,14 +49,19 @@ void AMateria::use(ICharacter& target) {
 ////////////////////////////////////////////////////////////////////////////////
 
 MateriaSource::MateriaSource() {
+    for (int i = 0; i < 4; i++)
+        this->_materia[i] = NULL;
     std::cout << "IMateriaSource default constructor called" << std::endl;
 }
 
 MateriaSource::MateriaSource(MateriaSource const &src) {
+
     std::cout << "IMateriaSource copy constructor called" << std::endl;
 }
 
 MateriaSource::~MateriaSource() {
+    for (int i = 0; i < 4; i++)
+        delete this->_materia[i];
     std::cout << "IMateriaSource destructor called" << std::endl;
 }
 
@@ -71,8 +77,7 @@ void MateriaSource::learnMateria(AMateria* materia)
     {
         if (this->_materia[i] == NULL)
             this->_materia[i] = materia;
-        else
-            i++;
+        i++;
     }
     return ;
 }
@@ -87,9 +92,14 @@ AMateria* MateriaSource::createMateria(std::string const & type)
     
     while (i < 4)
     {
-    
-
-        
+        if (this->_materia[i]->getType() == type)
+        {
+            copy = this->_materia[i]->clone();
+            return copy;
+        }
+        i++;
     }
-        
+
+    std::cout << "error: materia creation failed" << std::endl;
+    return 0;
 }
