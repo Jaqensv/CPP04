@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 14:58:15 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/16 16:06:46 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/21 19:39:29 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 # define MATERIA_CLASS_HPP
 
 # include <iostream>
-# include "Character.class.hpp"
+
+class ICharacter;
 
 class AMateria {
 
-protected:
-    
 public:
     AMateria();
     AMateria(AMateria const &src);

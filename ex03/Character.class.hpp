@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:05:24 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/17 17:24:54 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/21 19:19:43 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include "Materia.class.hpp"
 
-// # include <cstring> // strcmp
+class AMateria;
 
 class ICharacter {
 
@@ -40,12 +40,10 @@ public:
     virtual void equip(AMateria* m);
     virtual void unequip(int idx);
     virtual void use(int idx, ICharacter& target);
-    
 private:
     std::string _name;
     AMateria* _inventory[4];
-    int _inv_counter;
-    AMateria** _ground;
+    AMateria* _ground[4];
 };
 
 #endif

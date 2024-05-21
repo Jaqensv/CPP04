@@ -6,13 +6,13 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 14:16:52 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/16 16:14:27 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/21 19:47:05 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.class.hpp"
 
-Cure::Cure() {
+Cure::Cure() : AMateria("cure") {
     std::cout << "Cure default constructor called" << std::endl;
 }
 
@@ -25,6 +25,9 @@ Cure::~Cure() {
 }
 
 Cure &Cure::operator=(Cure const &rhs) {
+    if (this != &rhs)
+        this->_materiaType = rhs._materiaType;
+    return (*this);
     std::cout << "Cure copy assigment operator called" << std::endl;
 }
 
