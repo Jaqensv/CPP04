@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 14:23:00 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/21 19:46:34 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/22 16:33:57 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ Ice::~Ice() {
 Ice &Ice::operator=(Ice const &rhs) {
     if (this != &rhs)
         this->_materiaType = rhs._materiaType;
-    return (*this);
     std::cout << "Ice copy assigment operator called" << std::endl;
+    return (*this);
+    
 }
 
 AMateria *Ice::clone() const {

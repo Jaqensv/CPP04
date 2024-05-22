@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 14:59:24 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/21 20:18:33 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/05/22 16:34:35 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,8 @@ MateriaSource::MateriaSource(MateriaSource const &src) {
 MateriaSource::~MateriaSource() {
     for (int i = 0; i < 4; i++)
     {
-        //std::cout << "seg?" << std::endl;
         if (this->_materia[i])
-        {
             delete this->_materia[i];
-            //std::cout << "seg?   2" << std::endl;
-        }
     }
     std::cout << "IMateriaSource destructor called" << std::endl;
 }
@@ -99,7 +95,6 @@ void MateriaSource::learnMateria(AMateria* materia)
             return ;
         }
         i++;
-        //std::cout << "materia =  " << this->_materia[i]->getType() << std::endl;
     }
     return ;
 }
@@ -114,10 +109,8 @@ AMateria* MateriaSource::createMateria(std::string const & type)
     
     while (i < 4)
     {
-        std::cout << this->_materia[i]->getType() << std::endl;
         if (this->_materia[i]->getType() == type)
         {
-            //std::cout << "in" << std::endl;
             copy = this->_materia[i]->clone();
             return copy;
         }
