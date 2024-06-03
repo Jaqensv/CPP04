@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 14:16:52 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/06/03 18:08:23 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/06/03 18:31:30 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ Cure::Cure() : AMateria("cure") {
 }
 
 Cure::Cure(Cure const &src) {
+    this->_materiaType = src.getType();
     std::cout << "Cure copy constructor called" << std::endl;
 }
 
@@ -29,7 +30,6 @@ Cure &Cure::operator=(Cure const &rhs) {
         this->_materiaType = rhs._materiaType;
     std::cout << "Cure copy assigment operator called" << std::endl;
     return (*this);
-    
 }
 
 AMateria* Cure::clone() const {
