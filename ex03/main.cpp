@@ -6,14 +6,14 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 14:56:41 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/05/21 20:20:13 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/06/03 18:07:53 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Materia.class.hpp"
-#include "Character.class.hpp"
-#include "Ice.class.hpp"
-#include "Cure.class.hpp"
+#include "Materia.hpp"
+#include "Character.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 int main()
 {

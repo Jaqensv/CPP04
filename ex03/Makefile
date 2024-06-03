@@ -1,18 +1,15 @@
 NAME = main
-SOURCES = main.cpp Character.class.cpp Cure.class.cpp Ice.class.cpp Materia.class.cpp
+SOURCES = main.cpp Character.cpp Cure.cpp Ice.cpp Materia.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: ${NAME}
 
-%.o: %.c++
-	$(CC) -c $(CFLAGS) -g3 $< -o $@ -I
-
 ${NAME}: ${OBJECTS}
-	$(CC) $(CFLAGS) -g3 -o ${NAME} ${OBJECTS}
+	$(CXX) $(CXXFLAGS) -g3 -o ${NAME} ${OBJECTS}
 
 clean:
 	rm -f ${OBJECTS}
