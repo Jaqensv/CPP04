@@ -6,14 +6,15 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 13:05:22 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/06/03 18:11:39 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/06/03 18:43:54 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 #include "Materia.hpp"
 
-Character::Character() {
+Character::Character() 
+{
     for (int i = 0; i < 4; i++)
     {
         this->_inventory[i] = NULL;
@@ -22,17 +23,19 @@ Character::Character() {
     std::cout << "ICharacter default constructor called" << std::endl;
 }
 
-Character::Character(Character const &src) {
-    this->_name = src._name;
+Character::Character(Character const &src) 
+{
     for (int i = 0; i < 4; i++)
     {
         this->_inventory[i] = src._inventory[i];
         this->_ground[i] = src._ground[i];
     }
+    this->_name = src._name;
     std::cout << "ICharacter copy constructor called" << std::endl;
 }
 
-Character::Character(std::string name) : _name(name) {
+Character::Character(std::string name) : _name(name) 
+{
     for (int i = 0; i < 4; i++)
     {
         this->_inventory[i] = NULL;
@@ -41,7 +44,8 @@ Character::Character(std::string name) : _name(name) {
     std::cout << "ICharacter constructor called" << std::endl;
 }
 
-Character::~Character() {
+Character::~Character() 
+{
     for (int i = 0; i < 4; i++)
     {
         delete this->_inventory[i];
@@ -50,7 +54,13 @@ Character::~Character() {
     std::cout << "ICharacter destructor called" << std::endl;
 }
 
-Character &Character::operator=(Character const &rhs) {
+Character &Character::operator=(Character const &rhs) 
+{
+    for (int i = 0; i < 4; i++)
+    {
+        this->_inventory[i] = rhs._inventory[i];
+        this->_ground[i] = rhs._ground[i];
+    }
     this->_name = rhs._name;
     std::cout << "ICharacter copy assigment operator called" << std::endl;
     return *this;

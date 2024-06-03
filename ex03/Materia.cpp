@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 14:59:24 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/06/03 18:08:50 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/06/03 18:45:47 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ AMateria::~AMateria() {
     std::cout << "AMateria destructor called" << std::endl;
 }
 
-AMateria &AMateria::operator=(AMateria const &rhs) {
+AMateria &AMateria::operator=(AMateria const &rhs) 
+{
     this->_materiaType = rhs._materiaType;
     std::cout << "AMateria copy assigment operator called" << std::endl;
     return *this;
@@ -51,18 +52,22 @@ void AMateria::use(ICharacter& target)
 
 ////////////////////////////////////////////////////////////////////////////////
 
-MateriaSource::MateriaSource() {
+MateriaSource::MateriaSource() 
+{
     for (int i = 0; i < 4; i++)
         this->_materia[i] = NULL;
     std::cout << "IMateriaSource default constructor called" << std::endl;
 }
 
-MateriaSource::MateriaSource(MateriaSource const &src) {
-    *this = src;
+MateriaSource::MateriaSource(MateriaSource const &src) 
+{
+    for (int i = 0; i < 4; i++)
+        this->_materia[i] = src._materia[i];
     std::cout << "IMateriaSource copy constructor called" << std::endl;
 }
 
-MateriaSource::~MateriaSource() {
+MateriaSource::~MateriaSource() 
+{
     for (int i = 0; i < 4; i++)
     {
         if (this->_materia[i])
